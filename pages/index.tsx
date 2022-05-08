@@ -1,75 +1,46 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Willion s.r.o.</title>
-        <meta name="description" content="Information about Willion s.r.o." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home: NextPage = () => (
+  <div className={styles.container}>
+    <Head>
+      <title>Willion s.r.o.</title>
+      <meta name="description" content="Information about Willion s.r.o." />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Willion s.r.o.
-        </h1>
+    <main className={styles.main}>
+      <h1 className={styles.title}>Willion s.r.o.</h1>
 
+      <div>
         <p className={styles.description}>
-          Medzihradská 51<br />
-          Dolný Kubín, 02601 Slovakia<br />
-          IČ DPH: SK2120172021<br />
-          IČO: 50092758<br />
-          DIČ: 2120172021
+          Medzihradská 51
+          <br />
+          Dolný Kubín, 02601 Slovakia
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Andrejstas.com &rarr;</h2>
-            <p>Owner of Willion s.r.o.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className={styles.description}>
+          IČ DPH: <span className={styles.code}>SK2120172021</span>
+          <br />
+          IČO: <span className={styles.code}>50092758</span>
+          <br />
+          DIČ: <span className={styles.code}>2120172021</span>
         </div>
-      </main>
+      </div>
 
-      <footer className={styles.footer}>
+      <div className={styles.grid}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
-          rel="noopener noreferrer"
+          href="https://andrejstas.com"
+          className={styles.card}
+          rel="noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          <h2>AndrejStas.com &rarr;</h2>
+          <p>Owner of Willion s.r.o.</p>
         </a>
-      </footer>
-    </div>
-  )
-}
+      </div>
+    </main>
+  </div>
+);
 
-export default Home
+export default Home;
